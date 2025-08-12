@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+
+            background-color: rgb(136, 173, 173);
+        }
+        .layer {
+            width: 600px;
+            height: 400px;
+            border-radius: 80px;
+            border-width: 20px;
+            border-color: white;
+            border-style: solid;
+            background-color: rgb(121, 145, 79);
+            padding-left: 50px;
+            font-size: 32px; 
+           
+        }
+        .btn {
+            width:80px; 
+            height: 40px;
+            font-size: 22px;
+            background-color: azure;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        const body = document.querySelector("body")
+         const container = document.createElement("div"); 
+         container.className = "layer"; 
+         const bill = document.createElement("p");
+          
+         bill.innerText = "Bill" 
+         const input = document.createElement("input"); 
+         const selectTip = document.createElement("p"); 
+         selectTip.innerText = "Select Tip %:" 
+
+       
+        // Buttons 
+        // ------ rows to place buttons nicely 
+        const div1 = document.createElement('div');
+        div1.style.display = "flex"; 
+        div1.style.justifyContent = "space-evenly";
+        div1.style.margin = "5px";  
+        const div2 = document.createElement('div'); 
+        div2.style.display = "flex"; 
+        div2.style.justifyContent = "space-evenly"; 
+
+
+            const button5 = document.createElement("button"); 
+            button5.innerText = "5%";
+            button5.className = "btn" 
+            const button10 = document.createElement("button"); 
+            button10.innerText = "10%";
+            button10.className = "btn"  
+            const button15 = document.createElement("button"); 
+            button15.innerText = "15%"; 
+            button15.className = "btn" 
+            const button25 = document.createElement("button"); 
+            button25.innerText = "25%"; 
+            button25.className = "btn" 
+      
+        
+        const button35 = document.createElement("button"); 
+        button35.innerText = "35%"; 
+         button35.className = "btn" 
+        const button50 = document.createElement("button"); 
+        button50.innerText = "50%"; 
+         button50.className = "btn" 
+        const button65 = document.createElement("button"); 
+        button65.innerText = "65%"; 
+         button65.className = "btn" 
+        const button80 = document.createElement("button"); 
+        button80.innerText = "80%";
+         button80.className = "btn" 
+        
+        const reset = document.createElement("button"); 
+        reset.innerText = "RESET";
+        reset.className = "btn"  
+
+        // Result 
+        const ul = document.createElement("ul"); 
+        
+        // Append elements 
+
+        body.appendChild(container); 
+        container.appendChild(bill); 
+        container.appendChild(selectTip);
+        div1.appendChild(button5); 
+        div1.appendChild(button10); 
+        div1.appendChild(button15); 
+        div1.appendChild(button25); 
+        div2.appendChild(button35); 
+        div2.appendChild(button50); 
+        div2.appendChild(button65); 
+        div2.appendChild(button80); 
+        container.appendChild(reset); 
+        container.appendChild(ul); 
+        container.appendChild(input);
+        container.appendChild(div1);
+        container.appendChild(div2);
+        
+        // Calculation stated here: 
+
+    function createElement(value) {
+    const li = document.createElement("li");
+    li.innerText = value;
+    ul.appendChild(li);
+}
+
+button5.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.05;
+    createElement(tip + " " + "MNT");
+    
+});
+
+button10.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.1;
+    createElement(tip + " " + "MNT");
+});
+button15.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.15;
+    createElement(tip + " " + "MNT");
+});
+button25.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.25;
+    createElement(tip + " " + "MNT");
+});
+button35.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.35;
+    createElement(tip + " " + "MNT");
+});
+button50.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.5;
+    createElement(tip + " " + "MNT");
+});
+button65.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.65;
+    createElement(tip + " " + "MNT");
+});
+
+button80.addEventListener("click", () => {
+    let bill = parseInt(input.value);
+    let tip = bill * 0.8;
+    createElement(tip + " " + "MNT");
+});
+        // Reset function 
+         reset.addEventListener("click", () => {
+           input.value = ""; 
+           ul.innerHTML = ""; 
+        })
+
+    </script>
+   
+</body>
+</html>
