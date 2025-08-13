@@ -52,7 +52,7 @@
         border-radius: 50%;
         border-style: dashed;
         border-color: white;
-        animation: rotate 9s infinite;
+        animation: rotate 6s liner infinite;
         border-width: 4px;
         transform-origin: center center;
       }
@@ -130,8 +130,9 @@
         border-radius: 50%;
         border-style: dashed;
         border-color: white;
-        animation: rotate 2s linear infinite;
+        animation: rotate 16s linear infinite;
         border-width: 4px;
+      
       }
 
       .mercuryBox {
@@ -139,13 +140,11 @@
         height: 100px;
         border-radius: 50%;
         position: absolute;
-        top: 0;
-        left: 330px;
-        transform: translateX(-50%);
+        top: 95px;
+        left: 340px;
         background-image: url(img/mercury.jfif);
         background-position: center;
-        background-size: cover;
-        animation: spin 2s linear infinite;
+        animation: rotate 2s linear infinite;
       }
 
       .venusBox {
@@ -157,7 +156,7 @@
         left: 430px;
         top: 500px;
         background-image: url(img/venus.jfif);
-        background-size: contain;
+        background-position: center;
         animation: rotate 4s infinite;
       }
       .earthBox {
@@ -230,11 +229,13 @@
         background-color: rgb(17, 0, 255);
         position: absolute;
         border-radius: 50%;
-        left: 4350px;
+        left: 2800px;
         top: 700px;
-        animation: rotate 3s linear infinite;
+        animation: rotate 2s linear infinite;
         background-image: url(img/neptune.jfif);
-        background-size: cover;
+        background-position: center;
+       
+      
       }
 
       @keyframes rotate {
@@ -263,8 +264,9 @@
       <div class="saturnBox"></div>
       <div class="uranus"></div>
       <div class="uranusBox"></div>
-      <div class="neptune"></div>
-      <div class="neptuneBox"></div>
+      <div class="neptune">
+        <div class="neptuneBox"></div>
+      </div>
     </div>
   </body>
 </html>

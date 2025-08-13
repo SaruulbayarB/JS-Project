@@ -13,17 +13,19 @@
       .layer {
         width: 600px;
         height: 450px;
-        border-radius: 80px;
+        border-radius: 30px;
         border-width: 20px;
         border-color: white;
         border-style: solid;
-        background-color: rgb(121, 145, 79);
+        background-color: rgba(87, 131, 10, 0.5);
         padding-left: 50px;
         font-size: 30px;
         box-sizing: border-box;
+        margin-left: 500px;
+        margin-top: 200px; 
       }
       .btn {
-        width: 80px;
+        width: 100px;
         height: 40px;
         font-size: 22px;
         background-color: azure;
@@ -38,40 +40,46 @@
       // Container
       const container = document.createElement("div");
       container.className = "layer";
-
-      const div5 = document.createElement("div");
+      // Part 1 - Bill 
+      const div1 = document.createElement("div");
       const bill = document.createElement("p");
       bill.innerText = "Bill";
+      bill.style.marginTop = "10px"
+
+      // Part 2 - Input 
+
+      const div2 = document.createElement("div");
+      div2.style.display = "flex";
+      div2.style.justifyContent = "space-evenly";
+      div2.style.marginRight = "40px";
+      
 
       const input = document.createElement("input");
       input.style.height = "40px";
       input.style.width = "480px";
       input.placeholder = "₮";
       input.className = "btn";
-      const selectTip = document.createElement("p");
-      selectTip.innerText = "Select Tip %:";
+      input.style.marginTop = "-20px"
 
-      // Buttons
-      // ------ rows to place buttons nicely
-      const div1 = document.createElement("div");
-      div1.style.display = "flex";
-      div1.style.justifyContent = "space-evenly";
-      div1.style.margin = "5px";
-      div1.style.marginRight = "40px";
-      const div2 = document.createElement("div");
-      div2.style.display = "flex";
-      div2.style.justifyContent = "space-evenly";
-      div2.style.marginRight = "40px";
-
-      const div4 = document.createElement("div");
-
+      //Part 3 - Select tip text 
+      
       const div3 = document.createElement("div");
       div3.style.justifyContent = "center";
-      div3.style.marginTop = "20px";
-      div3.style.marginRight = "40px";
-      div3.style.alignItems = "center";
-      div3.style.display = "flex";
+      div3.style.marginTop = "40px";
+      div3.style.alignItems = "left";
+     
+      const selectTip = document.createElement("p");
+      selectTip.innerText = "Select Tip %:";
+      selectTip.style.marginTop = "-10px"
 
+      //Part 4 - Buttons section 1 
+
+      const div4 = document.createElement("div");
+      div4.style.marginTop = "-20px"
+      div4.style.display = "flex";
+      div4.style.width = "470px"
+      div4.style.justifyContent = "space-between";
+    
       const button5 = document.createElement("button");
       button5.innerText = "5%";
       button5.className = "btn";
@@ -84,6 +92,14 @@
       const button25 = document.createElement("button");
       button25.innerText = "25%";
       button25.className = "btn";
+
+      // Part 5 - Buttons section 2 
+
+      const div5 = document.createElement("div");
+      div5.style.display = "flex";
+     div5.style.width = "470px"
+      div5.style.justifyContent = "space-between";
+      div5.style.marginTop = "10px"
 
       const button35 = document.createElement("button");
       button35.innerText = "35%";
@@ -98,50 +114,60 @@
       button80.innerText = "80%";
       button80.className = "btn";
 
-      // Result
-      const ul = document.createElement("ul");
+      // Part 6 - Result
+      const div6 = document.createElement("div");
+      div6.style.marginTop = "15px"
 
+      const result = document.createElement("span");
+      result.innerText = "Total: "
+      const number = document.createElement("span");
+      number.innerText = ""; 
+    
+      // Part 7 - Reset Button 
+      const div7 = document.createElement("div");
+      div7.style.marginTop = "15px";
       const reset = document.createElement("button");
-      reset.innerText = "RESET";
-      reset.style.width = "600px";
+      reset.innerText = "Reset";
+      reset.style.width = "470px";
       reset.className = "btn";
 
       // Append elements
 
       body.appendChild(container);
-      container.appendChild(bill);
-      container.appendChild(selectTip);
-      div1.appendChild(button5);
-      div1.appendChild(button10);
-      div1.appendChild(button15);
-      div1.appendChild(button25);
-      div2.appendChild(button35);
-      div2.appendChild(button50);
-      div2.appendChild(button65);
-      div2.appendChild(button80);
-      div3.appendChild(reset);
-      div5.appendChild(bill);
-
-      container.appendChild(input);
       container.appendChild(div1);
       container.appendChild(div2);
       container.appendChild(div3);
       container.appendChild(div4);
       container.appendChild(div5);
-      div4.appendChild(ul);
+      container.appendChild(div6);
+      container.appendChild(div7);
+      div1.appendChild(bill);
+      div2.appendChild(input);
+      div3.appendChild(selectTip);
+     div4.appendChild(button5); 
+      div4.appendChild(button10);
+      div4.appendChild(button15);
+      div4.appendChild(button25);
+      div5.appendChild(button35);
+      div5.appendChild(button50);
+      div5.appendChild(button65);
+      div5.appendChild(button80);
+      div6.appendChild(result);
+      div6.appendChild(number);
+      div7.appendChild(reset);
 
       // Calculation stated here:
 
       function createElement(value) {
-        const li = document.createElement("li");
-        li.innerText = value;
-        ul.appendChild(li);
+      
+        number.innerText = value;
+    
       }
 
       button5.addEventListener("click", () => {
         let bill = parseInt(input.value);
         let tip = bill * 0.05;
-        createElement(tip + " " + "MNT");
+        createElement(tip + "  " + "MNT");
       });
 
       button10.addEventListener("click", () => {
@@ -183,7 +209,7 @@
       // Reset function
       reset.addEventListener("click", () => {
         input.value = "";
-        ul.innerHTML = "";
+        number.innerHTML = "";
       });
     </script>
   </body>
