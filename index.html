@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-        .base {
-            width: 100vw;
-            height: 100vh;
-            background-image: url(/img/Background.avif); 
-            background-size: contain; 
-            position: relative;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            background-color: black;
-            box-sizing: border-box;
-        }
+      .base {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(/img/Background.avif);
+        background-size: contain;
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        box-sizing: border-box;
+      }
 
-        .sun {
-             width: 200px;
-             height: 200px;
-             position: absolute;
-             border-radius: 50%;
-             left: 3100px;
-             top: 1600px;
-         
-             background-image: url(img/sun.jfif);
-             background-position: center;
-        }
-        .mercury {
+      .sun {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        border-radius: 50%;
+        left: 3100px;
+        top: 1600px;
+
+        background-image: url(img/sun.jfif);
+        background-position: center;
+      }
+      .mercury {
         width: 400px;
         height: 400px;
         position: absolute;
@@ -41,234 +41,230 @@
         border: 4px dashed white;
         animation: rotate 5s linear infinite;
         transform-origin: center center;
-}
+      }
 
-         .venus {
-            width: 600px;
-            height: 600px;
-            position: absolute;
-            left: 2900px;
-            top: 1400px;
-            border-radius: 50%;
-            border-style: dashed;
-            border-color: white;
-            animation: rotate 9s infinite;
-            border-width: 4px;
-            transform-origin: center center;
-        }
+      .venus {
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: 2900px;
+        top: 1400px;
+        border-radius: 50%;
+        border-style: dashed;
+        border-color: white;
+        animation: rotate 9s infinite;
+        border-width: 4px;
+        transform-origin: center center;
+      }
 
-         .earth {
-            width: 800px;
-            height: 800px;
-            position: absolute;
-            left: 2800px;
-            top: 1300px;
-            border-radius: 50%;
-            border-style: dashed;
-            border-color: white;
-            animation: rotate 9s infinite;
-            border-width: 4px;
-        }
+      .earth {
+        width: 800px;
+        height: 800px;
+        position: absolute;
+        left: 2800px;
+        top: 1300px;
+        border-radius: 50%;
+        border-style: dashed;
+        border-color: white;
+        animation: rotate 9s infinite;
+        border-width: 4px;
+      }
 
-         .mars {
-            width: 1100px;
-            height: 1100px;
-            position: absolute;
-            left: 2650px;
-            top: 1150px;
-            border-radius: 50%;
-            border-style: dashed;
-            border-color: white;
-            animation: rotate 9s infinite;
-            border-width: 4px;
-        }
+      .mars {
+        width: 1100px;
+        height: 1100px;
+        position: absolute;
+        left: 2650px;
+        top: 1150px;
+        border-radius: 50%;
+        border-style: dashed;
+        border-color: white;
+        animation: rotate 9s infinite;
+        border-width: 4px;
+      }
 
-           .jupiter {
-            width: 1400px;
-            height: 1400px;
-            position: absolute;
-            left: 2500px;
-            top: 1000px;
-            border-radius: 50%;
-            border-style: dashed;
-            border-color: white;
-            animation: rotate 9s infinite;
-            border-width: 4px;
-        }
-        
-           .saturn {
-            width: 1800px;
-            height: 1800px;
-            position: absolute;
-            left: 2300px;
-            top: 800px;
-            border-radius: 50%;
-            border-style: dashed;
-            border-color: white;
-            animation: rotate 9s infinite;
-            border-width: 4px;
-        }
+      .jupiter {
+        width: 1400px;
+        height: 1400px;
+        position: absolute;
+        left: 2500px;
+        top: 1000px;
+        border-radius: 50%;
+        border-style: dashed;
+        border-color: white;
+        animation: rotate 9s infinite;
+        border-width: 4px;
+      }
 
-        .uranus {
-            width: 2400px;
-            height: 2400px;
-            position: absolute;
-            left: 2000px;
-            top: 500px;
-            border-radius: 50%;
-            border-style: dashed;
-            border-color: white;
-            animation: rotate 9s infinite;
-            border-width: 4px;
-        }
+      .saturn {
+        width: 1800px;
+        height: 1800px;
+        position: absolute;
+        left: 2300px;
+        top: 800px;
+        border-radius: 50%;
+        border-style: dashed;
+        border-color: white;
+        animation: rotate 9s infinite;
+        border-width: 4px;
+      }
+
+      .uranus {
+        width: 2400px;
+        height: 2400px;
+        position: absolute;
+        left: 2000px;
+        top: 500px;
+        border-radius: 50%;
+        border-style: dashed;
+        border-color: white;
+        animation: rotate 9s infinite;
+        border-width: 4px;
+      }
       .neptune {
-            width: 3100px;
-            height: 3100px;
-            position: absolute;
-            left: 1650px;
-            top: 150px; 
-            border-radius: 50%;
-            border-style: dashed;
-            border-color: white;
-            animation: rotate 2s linear infinite;
-            border-width: 4px;
-        }
+        width: 3100px;
+        height: 3100px;
+        position: absolute;
+        left: 1650px;
+        top: 150px;
+        border-radius: 50%;
+        border-style: dashed;
+        border-color: white;
+        animation: rotate 2s linear infinite;
+        border-width: 4px;
+      }
 
-     .mercuryBox {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 330px;
-    transform: translateX(-50%);
-    background-image: url(img/mercury.jfif);
-    background-position: center;
-    background-size: cover;
-    animation: spin 2s linear infinite; 
-}
+      .mercuryBox {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 330px;
+        transform: translateX(-50%);
+        background-image: url(img/mercury.jfif);
+        background-position: center;
+        background-size: cover;
+        animation: spin 2s linear infinite;
+      }
 
-           .venusBox {
-             width: 80px;
-             height: 80px;
-             background-color: rgb(17, 0, 255);
-             position: absolute;
-             border-radius: 50%;
-             left: 430px;
-             top: 500px;
-            background-image: url(img/venus.jfif);
-             background-size: contain;
-             animation: rotate 4s infinite;
-        }
-            .earthBox {
-             width: 120px;
-             height: 120px;
-             background-color: rgb(148, 145, 196);
-             position: absolute;
-             border-radius: 50%;
-             left: 700px;
-             top: 530px;
-             background-image: url(img/earth.jpg);
-             background-position: center;
-             animation: rotate 4s infinite;
-        }
+      .venusBox {
+        width: 80px;
+        height: 80px;
+        background-color: rgb(17, 0, 255);
+        position: absolute;
+        border-radius: 50%;
+        left: 430px;
+        top: 500px;
+        background-image: url(img/venus.jfif);
+        background-size: contain;
+        animation: rotate 4s infinite;
+      }
+      .earthBox {
+        width: 120px;
+        height: 120px;
+        background-color: rgb(148, 145, 196);
+        position: absolute;
+        border-radius: 50%;
+        left: 700px;
+        top: 530px;
+        background-image: url(img/earth.jpg);
+        background-position: center;
+        animation: rotate 4s infinite;
+      }
 
-        .marsBox {
-             width: 120px;
-             height: 120px;
-             background-color: rgb(148, 145, 196);
-             position: absolute;
-             border-radius: 50%;
-             left: 2600px;
-             top: 1760px;
-             background-image: url(img/mars.jpg);
-             background-position: center;
-             background-repeat: no-repeat;
-             animation: rotate 2s infinite;
-        }
+      .marsBox {
+        width: 120px;
+        height: 120px;
+        background-color: rgb(148, 145, 196);
+        position: absolute;
+        border-radius: 50%;
+        left: 2600px;
+        top: 1760px;
+        background-image: url(img/mars.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: rotate 2s infinite;
+      }
 
-        .jupiterBox {
-             width: 120px;
-             height: 120px;
-             background-color: rgb(196, 168, 145);
-             position: absolute;
-             border-radius: 50%;
-             left: 1950px;
-             top: 1600px;
-             background-image: url(img/uranus.avif);
-             background-position: center;
-             animation: rotate 1s linear infinite;
-        }
-        .saturnBox {
-             width: 120px;
-             height: 120px;
-             position: absolute;
-             border-radius: 50%;
-             left: 3850px;
-             top: 1600px;
-            background-image: url(img/saturn.jfif);
-            background-repeat: no-repeat;
-             background-position: center;
-             animation: rotate 0.5s linear infinite;
-             
-        }
+      .jupiterBox {
+        width: 120px;
+        height: 120px;
+        background-color: rgb(196, 168, 145);
+        position: absolute;
+        border-radius: 50%;
+        left: 1950px;
+        top: 1600px;
+        background-image: url(img/uranus.avif);
+        background-position: center;
+        animation: rotate 1s linear infinite;
+      }
+      .saturnBox {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        border-radius: 50%;
+        left: 3850px;
+        top: 1600px;
+        background-image: url(img/saturn.jfif);
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: rotate 0.5s linear infinite;
+      }
 
-          .uranusBox {
-             width: 120px;
-             height: 120px;
-             background-color: rgb(145, 196, 148);
-             position: absolute;
-             border-radius: 50%;
-             left: 2940px;
-             top: 2520px;
-             background-image: url(img/jupiter.avif);
-             background-position: center; 
-             animation: rotate 3s linear infinite;
-        }
-        .neptuneBox {
-             width: 200px;
-             height: 200px;
-             background-color: rgb(17, 0, 255);
-             position: absolute;
-             border-radius: 50%;
-             left: 4350px;
-             top: 700px;
-             animation: rotate 3s linear infinite;
-             background-image: url(img/neptune.jfif);
-             background-size: cover;
-           
-        }
-    
-    @keyframes rotate {
+      .uranusBox {
+        width: 120px;
+        height: 120px;
+        background-color: rgb(145, 196, 148);
+        position: absolute;
+        border-radius: 50%;
+        left: 2940px;
+        top: 2520px;
+        background-image: url(img/jupiter.avif);
+        background-position: center;
+        animation: rotate 3s linear infinite;
+      }
+      .neptuneBox {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(17, 0, 255);
+        position: absolute;
+        border-radius: 50%;
+        left: 4350px;
+        top: 700px;
+        animation: rotate 3s linear infinite;
+        background-image: url(img/neptune.jfif);
+        background-size: cover;
+      }
+
+      @keyframes rotate {
         to {
-            transform: rotate(360deg);
+          transform: rotate(360deg);
         }
-    }
-  
+      }
     </style>
 
-
     <div class="base">
-        <div class="sun"></div>
-        <div class="mercury">
-            <div class="mercuryBox"></div>
-        </div>
-        <div class="venus">
-            <div class="venusBox"></div>
-        </div>
-        <div class="earth">
-            <div class="earthBox"></div>
-        </div>
-        <div class="mars"></div>
-            <div class="marsBox"></div>
-        <div class="jupiter"></div>
-            <div class="jupiterBox"></div>
-        <div class="saturn"></div>
-            <div class="saturnBox"></div>
-        <div class="uranus"></div>
-            <div class="uranusBox"></div>
-        <div class="neptune"></div>
-            <div class="neptuneBox"></div>
+      <div class="sun"></div>
+      <div class="mercury">
+        <div class="mercuryBox"></div>
+      </div>
+      <div class="venus">
+        <div class="venusBox"></div>
+      </div>
+      <div class="earth">
+        <div class="earthBox"></div>
+      </div>
+      <div class="mars"></div>
+      <div class="marsBox"></div>
+      <div class="jupiter"></div>
+      <div class="jupiterBox"></div>
+      <div class="saturn"></div>
+      <div class="saturnBox"></div>
+      <div class="uranus"></div>
+      <div class="uranusBox"></div>
+      <div class="neptune"></div>
+      <div class="neptuneBox"></div>
     </div>
-</body>
+  </body>
 </html>

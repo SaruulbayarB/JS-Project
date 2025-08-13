@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../NodeJS/images"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "JS-Project"
+  }
+}

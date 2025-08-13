@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Timer</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: rgb(136, 173, 173);
+      }
+      .layer {
+        width: 600px;
+        height: 350px;
+        border-radius: 20px;
+        border-width: 20px;
+        border-color: rgb(49, 1, 49);
+        border-style: solid;
+        background-color: rgb(49, 1, 49);
+        font-size: 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 400px;
+        margin-left: 700px;
+      }
+      .btn {
+        width: 100px;
+        height: 30px;
+        font-size: 14px;
+        background-color: #d3d3d3;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #d3d3d3;
+        color: black;
+      }
+
+      .btn:hover {
+        background-color: rgb(231, 93, 231);
+        color: azure;
+        transform: ease-in-out;
+        border-color: rgb(231, 93, 231);
+        transition: 0.4s ease-in-out;
+      }
+    </style>
+    <script>
+      const body = document.querySelector("body");
+
+      // Container
+      const container = document.createElement("div");
+      container.className = "layer";
+
+      // Part 1 - Text
+      const div1 = document.createElement("div");
+      div1.style.display = "flex";
+      div1.style.color = "#D3D3D3";
+      div1.style.fontSize = "20px";
+      div1.style.fontFamily = "sanrif";
+
+      const text = document.createElement("p");
+      text.innerText = "Online Timer & Stopwatch";
+
+      // Part 2 - Timer Session
+      const div2 = document.createElement("div");
+      div2.style.display = "flex";
+
+      const hour = document.createElement("span");
+      hour.innerText = "00";
+      hour.style.fontSize = "100px";
+      hour.style.color = "#D3D3D3";
+      hour.style.fontFamily = "sans-serif";
+
+      const colon1 = document.createElement("span");
+      colon1.innerText = ":";
+      colon1.style.fontSize = "100px";
+      colon1.style.color = "#D3D3D3";
+
+      const minute = document.createElement("span");
+      minute.innerText = "00";
+      minute.style.fontSize = "100px";
+      minute.style.color = "#D3D3D3";
+      minute.style.fontFamily = "sans-serif";
+
+      const colon2 = document.createElement("span");
+      colon2.innerText = ":";
+      colon2.style.fontSize = "100px";
+      colon2.style.color = "#D3D3D3";
+
+      const second = document.createElement("span");
+      second.innerText = "00";
+      second.style.fontSize = "100px";
+      second.style.color = "#D3D3D3";
+      second.style.fontFamily = "sans-serif";
+
+      const div3 = document.createElement("div");
+      div3.style.display = "flex";
+      div3.style.justifyContent = "space-between";
+      div3.style.gap = "20px";
+      div3.style.marginTop = "40px";
+
+      const startButton = document.createElement("button");
+      startButton.innerText = "START";
+      startButton.className = "btn";
+
+      const stopButton = document.createElement("button");
+      stopButton.innerText = "STOP";
+      stopButton.className = "btn";
+
+      const resetButton = document.createElement("button");
+      resetButton.innerText = "RESET";
+      resetButton.className = "btn";
+
+      // Append to body
+
+      body.appendChild(container);
+
+      div1.appendChild(text);
+
+      container.appendChild(div1);
+      container.appendChild(div2);
+      container.appendChild(div3);
+
+      div3.appendChild(startButton);
+      div3.appendChild(stopButton);
+      div3.appendChild(resetButton);
+
+      div2.appendChild(hour);
+      div2.appendChild(colon1);
+      div2.appendChild(minute);
+      div2.appendChild(colon2);
+      div2.appendChild(second);
+
+      // Coding session
+
+      let seconds = 0;
+      let interval;
+      let minutes = 0;
+      let hours = 0;
+
+      function updateDisplay() {
+        hour.innerText = hours.toString().padStart(2, "0");
+        minute.innerText = minutes.toString().padStart(2, "0");
+        second.innerText = seconds.toString().padStart(2, "0");
+      }
+      function startTimer() {
+        if (!interval) {
+          interval = setInterval(() => {
+            seconds++;
+            second.innerText = seconds;
+
+            if (seconds === 60) {
+              minutes++;
+              minute.innerText = minutes;
+              seconds = 0;
+            }
+            if (minutes === 60) {
+              hours++;
+              hour.innerText = hours;
+              minutes = 0;
+            }
+            updateDisplay();
+            startButton.style.backgroundColor = "rgb(79, 65, 79)"; // Button background color is changed during the timing
+            startButton.style.borderColor = "rgb(79, 65, 79)"; // Button border color is changed during the timing
+          }, 1000);
+        }
+      }
+      function stopTimer() {
+        clearInterval(interval);
+        interval = null;
+        stopButton.style.backgroundColor = "rgb(79, 65, 79)"; // Button background color is changed during the timing
+        stopButton.style.borderColor = "rgb(79, 65, 79)"; // // Button border color is changed during the timing
+      }
+
+      function resetTimer() {
+        hour.innerText = "00";
+        minute.innerText = "00";
+        second.innerText = "00";
+        startButton.style.backgroundColor = "#d3d3d3"; // change the color back to the original state
+        startButton.style.borderColor = "rgb(79, 65, 79)"; // change the color back to the original state
+        stopButton.style.backgroundColor = "#d3d3d3"; // change the color back to the original state
+        stopButton.style.borderColor = "rgb(79, 65, 79)"; // change the color back to the original state
+      }
+      startButton.addEventListener("click", startTimer);
+      stopButton.addEventListener("click", stopTimer);
+      resetButton.addEventListener("click", resetTimer);
+    </script>
+  </body>
+</html>
