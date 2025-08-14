@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const body = document.querySelector("body");
+
+      const button = document.createElement("button");
+      button.innerText = "Quiz";
+
+      const question = document.createElement("p");
+      question.innerText =
+        "Which one of the below statements is true for array?";
+      question.style.marginLeft = "550px";
+      const container = document.createElement("div");
+      container.style.display = "flex";
+      container.style.flexDirection = "column";
+      container.style.width = "500px";
+      container.style.gap = "20px";
+      container.style.marginLeft = "500px";
+      container.style.top = "200px";
+
+      const q1 = document.createElement("button");
+      q1.innerText = "[ ] + [ ]";
+      const q2 = document.createElement("button");
+      q2.innerText = "" + 123;
+      const q3 = document.createElement("button");
+      q3.innerText = "Array comes with index and element";
+      const q4 = document.createElement("button");
+      q4.innerText = "number or true";
+      container.appendChild(q1);
+      container.appendChild(q2);
+      container.appendChild(q3);
+      container.appendChild(q4);
+
+      body.appendChild(button);
+
+      button.addEventListener("click", () => {
+        button.remove();
+        body.appendChild(question);
+        body.appendChild(container);
+      });
+    </script>
+  </body>
+</html>
